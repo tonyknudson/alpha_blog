@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "3.3.0"
 
+gem 'sass-rails'
+
 gem 'cssbundling-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
