@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 82px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 4px 2px;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+        }
+        .brown_button {background-color: #633621;}
+        .brown_button {border-radius: 8px;}
+        .black_button {background-color: #000000;}
+        .black_button {border-radius: 8px;}
+
+        .container {
+            height: calc(100vh - 200px);
+            display:flex;
+            position: relative;
+        }
+
+        .footer {
+            flex-grow: 1;
+            margin-top: auto;
+            height: 200;
+            display:flex;
+            position: sticky;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin: 0;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+
+        }
+            
+        .topcenter {
+            margin: 0;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+
+        .box {
+            position: absolute;
+            left: 60%;
+            top:20px;
+            width: 600px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            border-radius: 8px;
+            background-color: #222216;
+            z-index: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .footerbox {
+            width: 400px;
+            height: 50px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 0px;
+            color: white;
+            border-radius: 8px;
+            background-color: #222216;
+        }
+
+        .doublebuttonbox {
+            width: 100%;
+        }
+
+        body {
+            min-height: calc(100vh - 100px);
+            flex-grow: 5;
+            display: flex;
+            flex-direction: column;
+            background-image: url("https://global-uploads.webflow.com/636ba4b8e50150946598bfd8/649c4d9f17643ecf56cd7e9e_Alpha%20Theory%20Cameron%20Hight.jpg");  
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+
+            
+    <div class="container">
+        <div class="topcenter">
+            <button class="button brown_button">Login</button>
+            <div class="box">
+                <div class="center">
+                    <br/><br/>
+                    <h1>Alpha Blog.</h1>
+                    <br/>
+                    Learn all the best techniques to stay ahead in the cut throat world of stocks. Start reading now, time is your most valueable resource.
+                    <br/>
+                    <div class="doublebuttonbox"></div>
+                        <button class="button brown_button">@alpha_blog</button>
+                        <button class="button black_button">browse articles</button>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <!-- <div class="footercenter"> -->
+            <div class="footerbox">
+                <p id="datetime"></p>
+            </div>
+        <!-- </div> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        // Get current date and time
+        var now = new Date();
+        var datetime = now.toLocaleString();
+    
+        // Insert date and time into HTML
+        document.getElementById("datetime").innerHTML = "Most recent post: " + datetime;
+    </script>
+</body>
+</html>
